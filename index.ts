@@ -18,10 +18,10 @@ type LoginType = {
   password: string;
 };
 
-const createUser = async (auth: Auth, { email, password }: LoginType) =>
-  await createUserWithEmailAndPassword(auth, email, password);
+// const createUser = async (auth: Auth, { email, password }: LoginType) =>
+//   await createUserWithEmailAndPassword(auth, email, password);
 
-const logout = async (auth: Auth) => await signOut(auth);
+// const logout = async (auth: Auth) => await signOut(auth);
 
 // const resetPassword = (email: string) => sendPasswordResetEmail(auth, email);
 
@@ -54,4 +54,4 @@ const logout = async (auth: Auth) => await signOut(auth);
 //   }
 // };
 
-export { createUser, signInWithEmailAndPassword, logout }; // resetPassword, getToken, onAuthChanged, changePassword
+export { signInWithEmailAndPassword, signOut }; // resetPassword, getToken, onAuthChanged, changePassword
