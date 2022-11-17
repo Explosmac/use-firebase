@@ -1,6 +1,6 @@
 {
-  "name": "hmx-auth-client-fb",
-  "version": "1.0.1",
+  "name": "auth-client-firebase",
+  "version": "1.1.0",
   "description": "Firebase Auth Hook",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
     "auth"
   ],
   "author": "Hiago Maciel <hiago138@hotmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Explosmac/use-firebase/issues"
   },
