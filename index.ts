@@ -1,6 +1,4 @@
-import { initializeApp } from 'firebase/app';
 import {
-  getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
@@ -12,22 +10,10 @@ import {
   updatePassword,
   reauthenticateWithCredential,
   EmailAuthProvider,
+  Auth,
 } from 'firebase/auth';
 
-export type FirebaseConfig = {
-  apiKey: string;
-  authDomain: string;
-  projectId: string;
-  storageBucket: string;
-  messagingSenderId: string;
-  appId: string;
-  measurementId: string;
-};
-
-const authFirebase = (config: FirebaseConfig) => {
-  const app = initializeApp(config);
-  const auth = getAuth(app);
-
+const authFirebase = (auth: Auth) => {
   const createUser = (email: string, password: string) => createUserWithEmailAndPassword(auth, email, password);
 
   const login: (email: string, password: string) => Promise<UserCredential> = (email, password) =>
