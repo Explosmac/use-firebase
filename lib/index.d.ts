@@ -8,7 +8,7 @@ export type FirebaseConfig = {
     appId: string;
     measurementId: string;
 };
-declare const useFirebase: (config: FirebaseConfig) => {
+declare const authFirebase: (config: FirebaseConfig) => {
     createUser: (email: string, password: string) => Promise<UserCredential>;
     login: (email: string, password: string) => Promise<UserCredential>;
     logout: () => Promise<void>;
@@ -17,4 +17,4 @@ declare const useFirebase: (config: FirebaseConfig) => {
     onAuthChanged: (observer: NextOrObserver<User>) => import("@firebase/util").Unsubscribe;
     changePassword: (pass1: string, pass2: string, oldPass: string) => Promise<UserCredential>;
 };
-export default useFirebase;
+export default authFirebase;

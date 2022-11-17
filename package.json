@@ -1,6 +1,6 @@
 {
-  "name": "auth-client-firebase",
-  "version": "1.0.3",
+  "name": "hmx-auth-client-fb",
+  "version": "1.0.0",
   "description": "Firebase Auth Hook",
   "main": "index.js",
   "scripts": {
