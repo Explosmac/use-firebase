@@ -16,8 +16,6 @@ import {
 // const createUser = async (auth: Auth, email: string, password: string) =>
 //   await createUserWithEmailAndPassword(auth, email, password);
 
-const logout = signOut;
-
 // const resetPassword = (email: string) => sendPasswordResetEmail(auth, email);
 
 // const getToken = (forceRefresh?: boolean) => auth?.currentUser?.getIdToken(forceRefresh);
@@ -49,4 +47,4 @@ const logout = signOut;
 //   }
 // };
 
-export { signInWithEmailAndPassword, logout }; // resetPassword, getToken, onAuthChanged, changePassword
+export { signInWithEmailAndPassword, signOut }; // resetPassword, getToken, onAuthChanged, changePassword
