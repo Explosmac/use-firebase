@@ -1,6 +1,6 @@
 {
-  "name": "use-firebase",
-  "version": "1.0.0",
+  "name": "auth-client-firebase",
+  "version": "1.0.1",
   "description": "Firebase Auth Hook",
   "main": "index.js",
   "scripts": {
