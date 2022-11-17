@@ -50,10 +50,10 @@ const authFirebase = (config: FirebaseConfig) => {
   };
 
   const changePassword = async (pass1: string, pass2: string, oldPass: string) => {
-    if (pass1 != pass2) {
+    if (pass1 !== pass2) {
       throw { status: 400, message: 'Not match' };
     }
-    if (pass1 == oldPass) {
+    if (pass1 === oldPass) {
       throw { status: 400, message: 'Same password' };
     }
     const credential = reauthUser(oldPass);
