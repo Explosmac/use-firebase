@@ -24,7 +24,7 @@ export type FirebaseConfig = {
   measurementId: string;
 };
 
-const useFirebase = (config: FirebaseConfig) => {
+const authFirebase = (config: FirebaseConfig) => {
   const app = initializeApp(config);
   const auth = getAuth(app);
 
@@ -69,4 +69,4 @@ const useFirebase = (config: FirebaseConfig) => {
   return { createUser, login, logout, resetPassword, getToken, onAuthChanged, changePassword };
 };
 
-export default useFirebase;
+export default authFirebase;
