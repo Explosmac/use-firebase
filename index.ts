@@ -13,15 +13,10 @@ import {
   Auth,
 } from 'firebase/auth';
 
-type LoginType = {
-  email: string;
-  password: string;
-};
+const createUser = async (auth: Auth, email: string, password: string) =>
+  await createUserWithEmailAndPassword(auth, email, password);
 
-// const createUser = async (auth: Auth, { email, password }: LoginType) =>
-//   await createUserWithEmailAndPassword(auth, email, password);
-
-// const logout = async (auth: Auth) => await signOut(auth);
+const logout = async (auth: Auth) => await signOut(auth);
 
 // const resetPassword = (email: string) => sendPasswordResetEmail(auth, email);
 
@@ -54,4 +49,4 @@ type LoginType = {
 //   }
 // };
 
-export { signInWithEmailAndPassword, signOut }; // resetPassword, getToken, onAuthChanged, changePassword
+export { createUser, signInWithEmailAndPassword, logout }; // resetPassword, getToken, onAuthChanged, changePassword
