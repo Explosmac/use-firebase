@@ -13,16 +13,8 @@ import {
   Auth,
 } from 'firebase/auth';
 
-const authFirebase = () => {
-  return {
-    createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
-    signOut,
-    sendPasswordResetEmail,
-    onAuthStateChanged,
-    updatePassword,
-    reauthenticateWithCredential,
-  };
+const authFirebase = (auth: Auth) => {
+  return { logout: () => signOut(auth) };
   // const createUser = (email: string, password: string) => createUserWithEmailAndPassword(auth, email, password);
 
   // const login: (email: string, password: string) => Promise<UserCredential> = (email, password) =>
