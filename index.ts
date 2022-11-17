@@ -13,10 +13,10 @@ import {
   Auth,
 } from 'firebase/auth';
 
-const createUser = async (auth: Auth, email: string, password: string) =>
-  await createUserWithEmailAndPassword(auth, email, password);
+// const createUser = async (auth: Auth, email: string, password: string) =>
+//   await createUserWithEmailAndPassword(auth, email, password);
 
-const logout = async (auth: Auth) => await signOut(auth);
+const logout = signOut;
 
 // const resetPassword = (email: string) => sendPasswordResetEmail(auth, email);
 
@@ -49,4 +49,4 @@ const logout = async (auth: Auth) => await signOut(auth);
 //   }
 // };
 
-export { createUser, signInWithEmailAndPassword, logout }; // resetPassword, getToken, onAuthChanged, changePassword
+export { signInWithEmailAndPassword, logout }; // resetPassword, getToken, onAuthChanged, changePassword
